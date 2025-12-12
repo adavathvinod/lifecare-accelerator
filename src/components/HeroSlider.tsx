@@ -51,6 +51,30 @@ const HeroSlider = () => {
 
   return (
     <section id="home" className="relative h-screen min-h-[600px] overflow-hidden">
+      {/* Animated Background Gradient */}
+      <div className="absolute inset-0 z-[5] pointer-events-none overflow-hidden">
+        <div className="absolute -top-1/2 -left-1/2 w-[200%] h-[200%] animate-[spin_30s_linear_infinite] opacity-30">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-purple-deep/60 to-transparent rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-tl from-purple-medium/40 to-transparent rounded-full blur-3xl" />
+        </div>
+      </div>
+
+      {/* Floating Particles */}
+      <div className="absolute inset-0 z-[6] pointer-events-none overflow-hidden">
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-2 h-2 bg-primary-foreground/20 rounded-full animate-pulse"
+            style={{
+              left: `${15 + i * 15}%`,
+              top: `${20 + (i % 3) * 25}%`,
+              animationDelay: `${i * 0.5}s`,
+              animationDuration: `${2 + i * 0.3}s`,
+            }}
+          />
+        ))}
+      </div>
+
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -59,7 +83,9 @@ const HeroSlider = () => {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/40 z-10" />
+          {/* Enhanced Purple Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-deep/95 via-primary/80 to-purple-medium/60 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-purple-deep/50 via-transparent to-primary/30 z-10" />
           <img
             src={slide.image}
             alt={slide.title}
@@ -77,25 +103,27 @@ const HeroSlider = () => {
               key={currentSlide}
               className="animate-slide-up"
             >
-              <span className="inline-block px-4 py-1.5 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-full text-primary-foreground text-sm font-medium mb-6">
+              <span className="inline-block px-4 py-1.5 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-full text-primary-foreground text-sm font-medium mb-6 animate-fade-in">
                 {slides[currentSlide].subtitle}
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-                {slides[currentSlide].title}
+                <span className="inline-block animate-fade-in" style={{ animationDelay: "0.1s" }}>
+                  {slides[currentSlide].title}
+                </span>
               </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
                 {slides[currentSlide].description}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
                 <a href="#appointment">
-                  <Button variant="hero" size="xl" className="w-full sm:w-auto">
-                    <Calendar className="h-5 w-5" />
+                  <Button variant="hero" size="xl" className="w-full sm:w-auto group">
+                    <Calendar className="h-5 w-5 transition-transform group-hover:scale-110" />
                     Book Appointment
                   </Button>
                 </a>
                 <a href="#specialties">
-                  <Button variant="heroOutline" size="xl" className="w-full sm:w-auto">
-                    Explore Specialties
+                  <Button variant="heroOutline" size="xl" className="w-full sm:w-auto group">
+                    <span className="transition-transform group-hover:translate-x-1">Explore Specialties</span>
                   </Button>
                 </a>
               </div>
@@ -107,14 +135,14 @@ const HeroSlider = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/20 transition-all"
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/20 hover:scale-110 transition-all"
         aria-label="Previous slide"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/20 transition-all"
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/20 hover:scale-110 transition-all"
         aria-label="Next slide"
       >
         <ChevronRight className="h-6 w-6" />
@@ -137,7 +165,7 @@ const HeroSlider = () => {
       </div>
 
       {/* Stats Bar */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-primary/90 to-transparent pt-20 pb-20">
+      <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-purple-deep/95 to-transparent pt-20 pb-20">
         <div className="container-hospital">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -146,8 +174,8 @@ const HeroSlider = () => {
               { value: "10K+", label: "Happy Patients" },
               { value: "24/7", label: "Emergency Care" },
             ].map((stat, index) => (
-              <div key={index} className="text-primary-foreground">
-                <div className="text-3xl md:text-4xl font-bold">{stat.value}</div>
+              <div key={index} className="text-primary-foreground group">
+                <div className="text-3xl md:text-4xl font-bold transition-transform group-hover:scale-110">{stat.value}</div>
                 <div className="text-sm text-primary-foreground/80 mt-1">{stat.label}</div>
               </div>
             ))}
