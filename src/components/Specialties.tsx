@@ -90,7 +90,7 @@ const specialties = [
 
 const Specialties = () => {
   return (
-    <section id="specialties" className="section-padding gradient-teal-light">
+    <section id="specialties" className="section-padding gradient-purple-light">
       <div className="container-hospital">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
