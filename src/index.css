@@ -6,106 +6,106 @@
 
 @layer base {
   :root {
-    /* Healthcare Trust Palette */
+    /* Healthcare Trust Palette - Purple & White */
     --background: 0 0% 100%;
-    --foreground: 200 25% 15%;
+    --foreground: 270 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 200 25% 15%;
+    --card-foreground: 270 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 25% 15%;
+    --popover-foreground: 270 25% 15%;
 
-    /* Primary: Deep Teal - Trust & Authority */
-    --primary: 191 85% 30%;
+    /* Primary: Deep Professional Purple - Trust & Authority */
+    --primary: 270 60% 35%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Light Teal Background */
-    --secondary: 191 30% 95%;
-    --secondary-foreground: 191 85% 25%;
+    /* Secondary: Light Purple Background */
+    --secondary: 270 30% 95%;
+    --secondary-foreground: 270 60% 30%;
 
-    /* Muted: Soft Gray */
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 10% 45%;
+    /* Muted: Soft Gray with Purple hint */
+    --muted: 270 10% 96%;
+    --muted-foreground: 270 10% 45%;
 
-    /* Accent: Sky Blue Highlight */
-    --accent: 191 60% 90%;
-    --accent-foreground: 191 85% 25%;
+    /* Accent: Light Purple Highlight */
+    --accent: 270 40% 92%;
+    --accent-foreground: 270 60% 30%;
 
     /* Emergency Red - ONLY for emergency CTA */
     --destructive: 0 84% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 191 85% 30%;
+    --border: 270 15% 90%;
+    --input: 270 15% 90%;
+    --ring: 270 60% 35%;
 
     --radius: 0.625rem;
 
-    /* Custom Healthcare Tokens */
-    --teal-deep: 191 85% 30%;
-    --teal-medium: 191 70% 40%;
-    --teal-light: 191 50% 85%;
-    --teal-pale: 191 30% 95%;
+    /* Custom Healthcare Tokens - Purple Palette */
+    --purple-deep: 270 60% 35%;
+    --purple-medium: 270 50% 45%;
+    --purple-light: 270 40% 85%;
+    --purple-pale: 270 30% 95%;
     
     --emergency: 0 84% 50%;
     --success: 142 70% 40%;
     --warning: 38 92% 50%;
 
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(200 25% 15% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(200 25% 15% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(200 25% 15% / 0.1);
-    --shadow-xl: 0 20px 25px -5px hsl(200 25% 15% / 0.1);
+    --shadow-sm: 0 1px 2px 0 hsl(270 25% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(270 25% 15% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(270 25% 15% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(270 25% 15% / 0.1);
 
     /* Sidebar */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 191 85% 30%;
+    --sidebar-primary: 270 60% 35%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 191 30% 95%;
-    --sidebar-accent-foreground: 191 85% 25%;
-    --sidebar-border: 210 20% 90%;
-    --sidebar-ring: 191 85% 30%;
+    --sidebar-accent: 270 30% 95%;
+    --sidebar-accent-foreground: 270 60% 30%;
+    --sidebar-border: 270 15% 90%;
+    --sidebar-ring: 270 60% 35%;
   }
 
   .dark {
-    --background: 200 25% 8%;
+    --background: 270 25% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 200 25% 10%;
+    --card: 270 25% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 200 25% 10%;
+    --popover: 270 25% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 191 70% 50%;
-    --primary-foreground: 200 25% 8%;
+    --primary: 270 50% 55%;
+    --primary-foreground: 270 25% 8%;
 
-    --secondary: 200 20% 15%;
+    --secondary: 270 20% 15%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 200 20% 15%;
-    --muted-foreground: 210 10% 65%;
+    --muted: 270 20% 15%;
+    --muted-foreground: 270 10% 65%;
 
-    --accent: 200 20% 20%;
+    --accent: 270 20% 20%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 200 20% 20%;
-    --input: 200 20% 20%;
-    --ring: 191 70% 50%;
+    --border: 270 20% 20%;
+    --input: 270 20% 20%;
+    --ring: 270 50% 55%;
 
-    --sidebar-background: 200 25% 10%;
+    --sidebar-background: 270 25% 10%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 191 70% 50%;
-    --sidebar-primary-foreground: 200 25% 8%;
-    --sidebar-accent: 200 20% 15%;
+    --sidebar-primary: 270 50% 55%;
+    --sidebar-primary-foreground: 270 25% 8%;
+    --sidebar-accent: 270 20% 15%;
     --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 200 20% 20%;
-    --sidebar-ring: 191 70% 50%;
+    --sidebar-border: 270 20% 20%;
+    --sidebar-ring: 270 50% 55%;
   }
 }
 
@@ -137,17 +137,17 @@
     @apply py-16 md:py-24;
   }
 
-  .gradient-teal {
-    background: linear-gradient(135deg, hsl(var(--teal-deep)) 0%, hsl(var(--teal-medium)) 100%);
+  .gradient-purple {
+    background: linear-gradient(135deg, hsl(var(--purple-deep)) 0%, hsl(var(--purple-medium)) 100%);
   }
 
-  .gradient-teal-light {
-    background: linear-gradient(180deg, hsl(var(--teal-pale)) 0%, hsl(var(--background)) 100%);
+  .gradient-purple-light {
+    background: linear-gradient(180deg, hsl(var(--purple-pale)) 0%, hsl(var(--background)) 100%);
   }
 
-  .text-gradient-teal {
+  .text-gradient-purple {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--teal-deep)) 0%, hsl(var(--teal-medium)) 100%);
+    background-image: linear-gradient(135deg, hsl(var(--purple-deep)) 0%, hsl(var(--purple-medium)) 100%);
   }
 }
 

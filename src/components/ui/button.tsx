@@ -27,8 +27,8 @@ const buttonVariants = cva(
           "bg-primary text-primary-foreground shadow-lg hover:shadow-xl hover:bg-primary/95 text-base px-8 py-3",
         heroOutline:
           "border-2 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/20 text-base px-8 py-3",
-        teal:
-          "bg-gradient-to-r from-[hsl(var(--teal-deep))] to-[hsl(var(--teal-medium))] text-primary-foreground shadow-md hover:shadow-lg hover:opacity-95",
+        purple:
+          "bg-gradient-to-r from-[hsl(var(--purple-deep))] to-[hsl(var(--purple-medium))] text-primary-foreground shadow-md hover:shadow-lg hover:opacity-95",
       },
       size: {
         default: "h-10 px-5 py-2",

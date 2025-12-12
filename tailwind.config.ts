@@ -60,11 +60,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        teal: {
-          deep: "hsl(var(--teal-deep))",
-          medium: "hsl(var(--teal-medium))",
-          light: "hsl(var(--teal-light))",
-          pale: "hsl(var(--teal-pale))",
+        purple: {
+          deep: "hsl(var(--purple-deep))",
+          medium: "hsl(var(--purple-medium))",
+          light: "hsl(var(--purple-light))",
+          pale: "hsl(var(--purple-pale))",
         },
         emergency: "hsl(var(--emergency))",
         success: "hsl(var(--success))",
@@ -76,8 +76,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        'card': '0 4px 20px -2px hsl(var(--teal-deep) / 0.08)',
-        'card-hover': '0 8px 30px -4px hsl(var(--teal-deep) / 0.15)',
+        'card': '0 4px 20px -2px hsl(var(--purple-deep) / 0.08)',
+        'card-hover': '0 8px 30px -4px hsl(var(--purple-deep) / 0.15)',
         'emergency': '0 4px 20px -2px hsl(var(--emergency) / 0.3)',
       },
       keyframes: {
