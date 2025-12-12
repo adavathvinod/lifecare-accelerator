@@ -1,87 +1,88 @@
-import { 
-  Heart, 
-  Brain, 
-  Bone, 
-  Baby, 
-  Stethoscope, 
-  Activity, 
-  Pill, 
-  Microscope,
-  Scissors,
-  Wind,
-  Droplets
-} from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  ActivityIcon,
+  HeartPlusIcon,
+  BrainIcon,
+  BoneIcon,
+  BabyIcon,
+  DropletIcon,
+  StethoscopeIcon,
+  MicroscopeIcon,
+  ScissorsIcon,
+  LungsIcon,
+  HeartBeatIcon,
+  PillIcon,
+} from "@/components/icons/SpecialtyIcons";
 
 const specialties = [
   {
-    icon: Activity,
+    Icon: ActivityIcon,
     name: "Critical Care",
     description: "24/7 ICU with advanced life support systems and expert intensivists.",
     color: "bg-emergency/10 text-emergency",
   },
   {
-    icon: Heart,
+    Icon: HeartPlusIcon,
     name: "Cardiology",
     description: "Comprehensive heart care including diagnostics, intervention, and surgery.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Brain,
+    Icon: BrainIcon,
     name: "Neurology",
     description: "Expert treatment for neurological disorders and brain conditions.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Bone,
+    Icon: BoneIcon,
     name: "Orthopedics",
     description: "Joint replacements, trauma care, and sports medicine expertise.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Baby,
+    Icon: BabyIcon,
     name: "OBG & Gynaecology",
     description: "Complete women's health services from adolescence through menopause.",
     color: "bg-accent text-primary",
   },
   {
-    icon: Droplets,
+    Icon: DropletIcon,
     name: "Urology",
     description: "Advanced urological treatments and minimally invasive procedures.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Stethoscope,
+    Icon: StethoscopeIcon,
     name: "General Medicine",
     description: "Comprehensive primary care and preventive health services.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Microscope,
+    Icon: MicroscopeIcon,
     name: "Medical Gastroenterology",
     description: "Digestive health expertise with advanced endoscopic procedures.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Scissors,
+    Icon: ScissorsIcon,
     name: "General & Laparoscopic Surgery",
     description: "Minimally invasive surgical procedures for faster recovery.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Wind,
+    Icon: LungsIcon,
     name: "Pulmonology",
     description: "Respiratory care and treatment for lung conditions.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Heart,
+    Icon: HeartBeatIcon,
     name: "Vascular Surgery",
     description: "Expert treatment for blood vessel disorders and conditions.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Pill,
+    Icon: PillIcon,
     name: "Surgical Oncology",
     description: "Comprehensive cancer surgery with multidisciplinary approach.",
     color: "bg-primary/10 text-primary",
@@ -112,9 +113,10 @@ const Specialties = () => {
               href="#doctors"
               key={index}
               className="group bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 border border-border/50"
+              style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className={`w-14 h-14 rounded-xl ${specialty.color} flex items-center justify-center mb-4 transition-transform group-hover:scale-110`}>
-                <specialty.icon className="h-7 w-7" />
+              <div className={`w-14 h-14 rounded-xl ${specialty.color} flex items-center justify-center mb-4 transition-transform group-hover:scale-110 group-hover:rotate-3`}>
+                <specialty.Icon className="h-7 w-7" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                 {specialty.name}
@@ -129,8 +131,8 @@ const Specialties = () => {
         {/* CTA */}
         <div className="text-center mt-12">
           <a href="#doctors">
-            <Button variant="default" size="lg">
-              Find a Doctor by Specialty
+            <Button variant="default" size="lg" className="group">
+              <span className="transition-transform group-hover:translate-x-1">Find a Doctor by Specialty</span>
             </Button>
           </a>
         </div>
